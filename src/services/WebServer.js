@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express();
-const PORT = 3333 || process.env.PORT
+const PORT = process.env.PORT || 3333
 function StartServer() {
   return new Promise((resolve, reject) => {
-    const server = app.listen(PORT, () => resolve({ server, app }))
+    const server = app.listen(PORT, () => {
+      console.log('listening on port: ' + PORT);
+      resolve({ server, app })
+    })
   })
 }
 
