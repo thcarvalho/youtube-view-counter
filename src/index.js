@@ -8,5 +8,5 @@ require('dotenv').config()
 Authenticate().then(() => {
   setInterval(() => {
     getVideo().then(video => updateVideo(video))
-  }, ms('10m'))
+  }, ms('5m'))
 })
