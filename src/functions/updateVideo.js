@@ -14,7 +14,7 @@ function updateVideo(video) {
   service.videos.update({
     part: 'snippet',
     requestBody: {
-      id: '0qmOPs3uUq8',
+      id: '6eJyqDP1lZw',
       snippet: {
         title: updatedTitle,
         categoryId: '22'
