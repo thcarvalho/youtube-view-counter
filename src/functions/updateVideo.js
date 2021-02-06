@@ -17,6 +17,7 @@ function updateVideo(video) {
       id: '6eJyqDP1lZw',
       snippet: {
         title: updatedTitle,
+        description: video.snippet.description,
         categoryId: '22'
       }
     }
