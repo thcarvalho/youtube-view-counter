@@ -26,6 +26,7 @@ function createOAuth() {
 function requestUser(OAuthToken) {
   const authUrl = OAuthToken.generateAuthUrl({
     access_type: 'offline',
+    prompt: 'consent',
     scope: ['https://www.googleapis.com/auth/youtube']
   });
   console.log('Authorize this app by visiting this url: ', authUrl);
@@ -34,7 +35,7 @@ function requestUser(OAuthToken) {
 async function requestAccessToken(OAuthToken, authCode) {
   return new Promise((resolve, reject) => {
     OAuthToken.getToken(authCode, function (err, token) {
-    if (err) {
+      if (err) {
         console.log('Error while trying to retrieve access token', err);
         return reject(err);
       }
@@ -55,11 +56,11 @@ async function waitGoogleResponse(app) {
   return new Promise((resolve, reject) => {
     app.get('/oauth', (req, res) => {
       const authCode = req.query.code
-      console.log('Token: '+authCode);
+      console.log('Token: ' + authCode);
       res.send('OK')
       resolve(authCode)
     })
-    
+
   })
 }
 
