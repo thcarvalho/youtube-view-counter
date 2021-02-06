@@ -4,7 +4,7 @@ function updateVideo(video) {
   var service = google.youtube('v3')
 
   const currentTitle = video.snippet.title
-  const updatedTitle = `Esse vídeo tem ${video.statistics.viewCount} views`
+  const updatedTitle = `ESSE VÍDEO TEM ${video.statistics.viewCount} VIEWS`
 
   if (currentTitle === updatedTitle) {
     console.log('Titulo não mudou');
