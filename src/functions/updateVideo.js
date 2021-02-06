@@ -14,7 +14,7 @@ function updateVideo(video) {
   service.videos.update({
     part: 'snippet',
     requestBody: {
-      id: '6eJyqDP1lZw',
+      id: process.env.VIDEO_ID,
       snippet: {
         title: updatedTitle,
         description: video.snippet.description,

@@ -6,7 +6,7 @@ async function getVideo() {
   return new Promise((resolve, reject) => {
     service.videos.list({
       part: 'snippet,statistics',
-      id: '6eJyqDP1lZw'
+      id: process.env.VIDEO_ID
     }, (err, response) => {
       if (err) {
         console.log('The API returned an error: ' + err);
