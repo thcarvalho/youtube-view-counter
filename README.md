@@ -36,10 +36,10 @@ $ git clone https://github.com/thcarvalho/youtube-view-counter
 
 Após isso, entre na pasta do projeto e crie um arquivo .env na raiz do projeto com as seguintes informações:
 
-CLIENT_ID: Seu id de cliente (client_id)
-API_KEY: Sua chave da API (client_secret)
-REDIRECT_URI: A mesma URI utilizada no painel Credenciais em "URIs de redirecionamento", no console do GCP. Como exemplo no projeto, estamos usando http://localhost:3333/oauth
-VIDEO_ID: O ID do vídeo que você quer que seja atualizado, esse ID é obtido na URL do vídeo, por exemplo: em https://www.youtube.com/watch?v=6eJyqDP1lZw, o ID é 6eJyqDP1lZw, correspondente ao final da URL.
+- CLIENT_ID: Seu id de cliente (client_id)
+- API_KEY: Sua chave da API (client_secret)
+- REDIRECT_URI: A mesma URI utilizada no painel Credenciais em "URIs de redirecionamento", no console do GCP. Como exemplo no projeto, estamos usando http://localhost:3333/oauth
+- VIDEO_ID: O ID do vídeo que você quer que seja atualizado, esse ID é obtido na URL do vídeo, por exemplo: em https://www.youtube.com/watch?v=6eJyqDP1lZw, o ID é 6eJyqDP1lZw, correspondente ao final da URL.
 
 Por fim, no terminal digite:
 
